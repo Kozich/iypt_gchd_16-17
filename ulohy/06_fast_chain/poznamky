@@ -3,4 +3,7 @@ Je nutné zjistit závislost restitučního koeficientu na rychlosti.
 Z této závislosti budu schopen vytvořit diskétní model pro řetěz.
 Užít model řetězu ze zdroje.
 Najít nekontinuální chování řetězu pro vysoké rychlosti.
+Měrit závislost pěsnosti modelu ze zdroje v závislosti na úhlu kolíků.
+Měrit funkčnost modelu v závislosti na rychlosti dopadu. Díky omezené rychlosti síření napětí řetězem.
+
 
