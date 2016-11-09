@@ -1,0 +1,40 @@
+\documentclass[11p, a4paper]{article}
+\usepackage{fkssugar}
+\textwidth 16cm \textheight 24.6cm
+\topmargin -1.3cm
+\oddsidemargin 0cm
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\begin{document}
+Pokud použiju rovnici pohybu pro "spojitý" žebřík padající z výšky
+\eq{
+    \ddot{x}=g+\frac{\dot{x}^2}{L-x}\frac{I}{p_0}
+}
+\begin{wrapfigure}{r}{0.5\textwidth}
+      \vspace{-20pt}
+      \begin{center}
+      \includegraphics[width=0.48\textwidth]{../src/z1.mps}
+      \end{center}
+      \vspace{-20pt}
+\end{wrapfigure}
+Klíčové je pro zjistit jak velký impuls bude předán od dopadajícího článku ke
+zbytku žebříku. Při tom použiju prozatím použiju následující aproximace první
+z ních je, že úhel, který svírá šprična s vodorovnou plochou $\alpha\approx0$.
+Další z nich je zanedbání hmotnosti jednoho článku $m<<M$ vůči hmotnosti zbytku
+žebříku $M$. Další je dokonalá tuhost článku. Posledně je celý příklad počítán
+s tím, že článek se se zemí srazí dokonale nepružně. Prvně si zavedu důležité
+pojmy na obrázku 1.
+\eq[m]{
+    l=2|\mathrm{DS}|\,,d=2|\mathrm{DT}|\lambda=\frac{m}{l}\\
+    L_D=\frac{1}{2}mvl\,,J_D=\frac{1}{3}l^2m\,,L_D=J_D\cdot\omega_0=\frac{1}{2}mvl\\
+    \omega_0=\frac{3}{2}\frac{v}{l}\ztoho v_T=d\omega_0=\frac{3}{2}\frac{d}{l}v
+}
+
+\eq[m]{
+    \omega=\frac{v}{d}\,,Id=\Delta \omega J_D=J_D(\omega_0-\omega)=
+    \frac{3d-2l}{6d}lmv\\
+    I=\frac{l}{d}\frac{3d-2l}{6d}mv
+}
+\end{document}
