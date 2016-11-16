@@ -94,8 +94,8 @@ c_double fft_coe(pf *f, double o){
 }
 
 int main(int argc, char *argv[]){
-    fprintf(stdout,"Initializing Data\n");
-    FILE *t;
+    fprintf(stdout,"Initializing Data\n");    
+	FILE *t;
     if(t=fopen(argv[1],"r+")){
         printf("%s\n",argv[1]);
     }
@@ -107,11 +107,11 @@ int main(int argc, char *argv[]){
     a.r=1;
     a.i=1;
     FILE *of=fopen("of","w+");
-    fprintf(stdout,"Starting DFT\n");
+    fprintf(stdout,"Starting DFT for 10kHz sample rate\n");
     time_t ot=time(NULL);
     for(unsigned long u=1;u<f->s/2;u++){
         c_double k = fft_coe(f,u);
-        fprintf(of,"%lu %lf\n", u*8000/(f->s), k.r*k.r + k.i*k.i);
+        fprintf(of,"%lu %lf\n", u*10000/(f->s), k.r*k.r + k.i*k.i);
     }
     time_t rt=time(NULL);
     fprintf(stdout,"Finished\n");
